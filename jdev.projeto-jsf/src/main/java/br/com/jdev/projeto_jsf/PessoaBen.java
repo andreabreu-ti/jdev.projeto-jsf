@@ -1,25 +1,46 @@
 package br.com.jdev.projeto_jsf;
 
-import javax.faces.bean.ManagedBean;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+import javax.faces.component.html.HtmlCommandButton;
+
+@ViewScoped
 @ManagedBean(name = "pessoaBen")
 public class PessoaBen {
 
 	private String nome;
-	private String sobrenome;
-	private String nomeCompleto;
 
-	public String mostraNome() {
-		nomeCompleto = nome + " " + sobrenome;
+	private HtmlCommandButton htmlCommandButton;
+
+	private List<String> nomes = new ArrayList<String>();
+
+	public HtmlCommandButton getHtmlCommandButton() {
+		return htmlCommandButton;
+	}
+
+	public void setHtmlCommandButton(HtmlCommandButton htmlCommandButton) {
+		this.htmlCommandButton = htmlCommandButton;
+	}
+
+	public String addNome() {
+		nomes.add(nome);
+		
+		if (nomes.size() > 3) {
+			htmlCommandButton.setDisabled(true);
+		}
+		
 		return "";
 	}
 
-	public String getNomeCompleto() {
-		return nomeCompleto;
+	public List<String> getNomes() {
+		return nomes;
 	}
 
-	public void setNomeCompleto(String nomeCompleto) {
-		this.nomeCompleto = nomeCompleto;
+	public void setNomes(List<String> nomes) {
+		this.nomes = nomes;
 	}
 
 	public String getNome() {
@@ -28,14 +49,6 @@ public class PessoaBen {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public String getSobrenome() {
-		return sobrenome;
-	}
-
-	public void setSobrenome(String sobrenome) {
-		this.sobrenome = sobrenome;
 	}
 
 }

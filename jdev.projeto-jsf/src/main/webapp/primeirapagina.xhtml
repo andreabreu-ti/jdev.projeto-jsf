@@ -17,17 +17,19 @@
 		Nome:
 		<h:inputText id="campoNome" value="#{pessoaBen.nome}" />
 
+		<h:commandButton binding="#{pessoaBen.htmlCommandButton}" value="Adicionar Nome" action="#{pessoaBen.addNome}" />
+		
 		<br />
-		Sobre Nome:
-		<h:inputText id="sobreno" value="#{pessoaBen.sobrenome}" />
-
-		<br />
-
-		<h:outputText value="#{pessoaBen.nomeCompleto}" />
-
-		<br />
-
-		<h:commandButton value="Mostrar" action="#{pessoaBen.mostraNome}" />
+		
+		<h:dataTable value="#{pessoaBen.nomes}" var="nome">
+		
+			<h:column>
+			
+				<h:outputText value="#{nome}" />
+			
+			</h:column>
+			
+		</h:dataTable>
 	</h:form>
 </h:body>
 

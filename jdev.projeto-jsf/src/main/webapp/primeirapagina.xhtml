@@ -15,11 +15,21 @@
 		<h1>Java Server Faces</h1>
 
 		Nome:
-		<h:inputText id="campoNome" value="#{pessoaBen.nome}" />
-
+		<h:inputText id="campoNome" value="#{pessoaBen.nome}" /><br />
+		Senha:
+		<h:inputSecret id="senha" value="#{pessoaBen.senha}" /><br />
+		Texto:
+		<h:inputTextarea id="texto" value="#{pessoaBen.texto}" rows="10" cols="20" /><br />
 		<h:commandButton binding="#{pessoaBen.htmlCommandButton}" value="Adicionar Nome" action="#{pessoaBen.addNome}" />
 		
-		<br />
+		<br /><br /><br />
+		
+		<h:outputText value="saida de texto" value="#{pessoaBen.nome}"/><br />
+		<h:outputLabel value="Nome:" for="camponome"/><br />
+		<h:outputText id="camponome" value="#{pessoaBen.nome}"/>
+		
+		
+		<br /><br />
 		
 		<h:dataTable value="#{pessoaBen.nomes}" var="nome">
 		

@@ -20,14 +20,23 @@
 	<dependency>
 		<groupId>org.postgresql</groupId>
 		<artifactId>postgresql</artifactId>
+<<<<<<< HEAD
 		<version>42.2.23</version>
+=======
+		<version>9.2-1002-jdbc4</version>
+>>>>>>> branch 'master' of https://github.com/andreabreu-ti/jdev.projeto-jsf.git
 	</dependency>
 	  
 	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 	<dependency>
 	    <groupId>org.hibernate</groupId>
 	    <artifactId>hibernate-core</artifactId>
+<<<<<<< HEAD
 	    <version>5.5.5.Final</version>
+=======
+	    <version>4.3.8.Final</version>
+	    <scope>compile</scope>
+>>>>>>> branch 'master' of https://github.com/andreabreu-ti/jdev.projeto-jsf.git
 	</dependency>
 
 	  
@@ -35,7 +44,12 @@
 	<dependency>
 	    <groupId>org.hibernate</groupId>
 	    <artifactId>hibernate-entitymanager</artifactId>
+<<<<<<< HEAD
 	    <version>5.5.5.Final</version>
+=======
+	    <version>4.3.8.Final</version>
+	    <scope>compile</scope>
+>>>>>>> branch 'master' of https://github.com/andreabreu-ti/jdev.projeto-jsf.git
 	</dependency>
  
 	  
